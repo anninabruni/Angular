@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'ng build'
+        bat 'ng build'
       }
     }
 
