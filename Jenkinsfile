@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        'npm run ng build'
+        step {
+          'npm run ng build'
+        }
       }
     }
 
