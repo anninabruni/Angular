@@ -14,7 +14,7 @@
 
 pipeline {
   agent {
-    docker { image 'node:latest' }
+    docker { image 'node:16-alpine' }
   }
   stages {
     stage('Install') {
@@ -24,7 +24,7 @@ pipeline {
     }
 
     stage('Build') {
-      steps { sh 'ng build' }
+      steps { sh 'npm run-script build' }
     }
   }
 }
