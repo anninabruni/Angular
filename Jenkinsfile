@@ -13,16 +13,18 @@
 // }
 
 pipeline {
-  agent {
-    docker { image 'node:latest' }
-  }
+  agent any
   stages {
     stage('Install') {
-      steps { sh 'npm install' }
+      steps { 
+        sh 'npm install' 
+        sh 'npm install -g @angular/cli@1.0.2'
+        sh 'ng --version'
+      }
     }
 
     stage('Build') {
-      steps { sh 'npm run ng build' }
+      steps { sh 'ng build' }
     }
   }
 }
