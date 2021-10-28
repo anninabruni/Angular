@@ -17,14 +17,14 @@ pipeline {
     docker { image 'node:latest' }
   }
   stages {
-    stage('Install') {
-      steps { 
-        sh 'npm install' 
-      }
-    }
+    // stage('Install') {
+    //   steps { 
+    //     sh 'npm install' 
+    //   }
+    // }
 
     stage('Build') {
-      steps { sh 'npm run-script build' }
+      steps { sh 'ng build' }
     }
   }
 }
