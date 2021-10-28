@@ -22,7 +22,7 @@ pipeline {
     }
 
     stage('Build') {
-      steps { sh 'ng build' }
+      steps { sh 'npm run ng build' }
     }
   }
 }
