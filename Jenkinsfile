@@ -20,13 +20,11 @@ pipeline {
     stage('Install') {
       steps { 
         sh 'npm install' 
-        sh 'npm install -g @angular/cli@1.0.2'
-        sh 'ng --version'
       }
     }
 
     stage('Build') {
-      steps { sh 'ng build' }
+      steps { sh 'npm build' }
     }
   }
 }
